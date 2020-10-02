@@ -17,8 +17,11 @@ for f in files:
             w, h = image.size
             midw = w / 2
             midh = h / 2
-            new_images.append(image.crop((0, 0, w, midh)))
-            new_images.append(image.crop((0, midh, w, h)))
+            # Left, top right, bottom
+            new_images.append(image.crop((0, 0, midw, midh)))
+            new_images.append(image.crop((midw, 0, w, midh)))
+            new_images.append(image.crop((0, midh, midw, h)))
+            new_images.append(image.crop((midw, midh, w, h)))
         pdf_name = "split_{}".format(f)
         new_images[0].save(
             pdf_name,

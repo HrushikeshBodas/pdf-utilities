@@ -4,3 +4,4 @@ Some basic pdf utilities to work on lecture slides
 Contains a command dialogue to select pdfs in order. Ends with a save as dialog  
 # Splitter.py
 Splits a 4in1 pdf into individual slides
+Also splits 1x2 pdfs if added flag
